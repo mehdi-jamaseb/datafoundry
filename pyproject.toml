@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datafoundry"
+version = "0.0.1"
+description = "A modular open-source framework for managing, transforming, and reorganizing data pipelines for AI and data analysis."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Mehdi Jamaseb", email = "m.jamaseb@gmail.com" }
+]
+maintainers = [
+    { name = "Mehdi Jamaseb", email = "m.jamaseb@gmail.com" }
+]
+keywords = ["data", "ai", "dataset", "reorganization", "machine-learning", "preprocessing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries"
+]
+
+dependencies = [
+    "tqdm>=4.65.0",
+    "rich>=13.0.0",
+    "pandas>=1.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=24.0",
+    "isort>=5.12",
+    "mypy>=1.0",
+    "flake8>=6.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/mehdi-jamaseb//DataFoundry"
+Repository = "https://github.com/mehdi-jamaseb//DataFoundry"
+Issues = "https://github.com/mehdi-jamaseb//DataFoundry/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["datafoundry*"]
+exclude = ["tests*"]
